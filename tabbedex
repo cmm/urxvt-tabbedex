@@ -208,19 +208,13 @@ sub configure {
    $tab->XMoveResizeWindow (
       $tab->parent,
       0, $self->{tabheight} + 1,
-      $self->width, $self->height - $self->{tabheight}
+      $self->width, $self->height + $self->fheight - $self->{tabheight}
    );
    $tab->XMoveResizeWindow (
       $tab->parent,
       0, $self->{tabheight},
-      $self->width, $self->height - $self->{tabheight}
+      $self->width, $self->height + $self->fheight - $self->{tabheight}
    );
-}
-
-sub on_resize_all_windows {
-    my ($self, $width, $height) = @_;
-
-    1
 }
 
 sub copy_properties {
