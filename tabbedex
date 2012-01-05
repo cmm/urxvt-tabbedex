@@ -170,8 +170,6 @@ sub refresh {
 sub new_tab {
    my ($self, @argv) = @_;
 
-   my $offset = $self->fheight;
-
    $self->{tabheight} = $self->{maxtabheight}
    unless $self->{autohide} && !(defined $self->{tabs} && @{ $self->{tabs} });
 
